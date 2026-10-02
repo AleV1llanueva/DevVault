@@ -1,0 +1,16 @@
+/home/avillanueva/Proyectos/DevVault/backend/DevVault.Application/bin/Debug/net10.0/DevVault.Application.deps.json
+/home/avillanueva/Proyectos/DevVault/backend/DevVault.Application/bin/Debug/net10.0/DevVault.Application.dll
+/home/avillanueva/Proyectos/DevVault/backend/DevVault.Application/bin/Debug/net10.0/DevVault.Application.pdb
+/home/avillanueva/Proyectos/DevVault/backend/DevVault.Application/bin/Debug/net10.0/DevVault.Domain.dll
+/home/avillanueva/Proyectos/DevVault/backend/DevVault.Application/bin/Debug/net10.0/DevVault.Domain.pdb
+/home/avillanueva/Proyectos/DevVault/backend/DevVault.Application/obj/Debug/net10.0/DevVault.Application.csproj.AssemblyReference.cache
+/home/avillanueva/Proyectos/DevVault/backend/DevVault.Application/obj/Debug/net10.0/DevVault.Application.GeneratedMSBuildEditorConfig.editorconfig
+/home/avillanueva/Proyectos/DevVault/backend/DevVault.Application/obj/Debug/net10.0/DevVault.Application.AssemblyInfoInputs.cache
+/home/avillanueva/Proyectos/DevVault/backend/DevVault.Application/obj/Debug/net10.0/DevVault.Application.AssemblyInfo.cs
+/home/avillanueva/Proyectos/DevVault/backend/DevVault.Application/obj/Debug/net10.0/DevVault.Application.csproj.CoreCompileInputs.cache
+/home/avillanueva/Proyectos/DevVault/backend/DevVault.Application/obj/Debug/net10.0/DevVault.Application.sourcelink.json
+/home/avillanueva/Proyectos/DevVault/backend/DevVault.Application/obj/Debug/net10.0/DevVault.FBCD25A5.Up2Date
+/home/avillanueva/Proyectos/DevVault/backend/DevVault.Application/obj/Debug/net10.0/DevVault.Application.dll
+/home/avillanueva/Proyectos/DevVault/backend/DevVault.Application/obj/Debug/net10.0/refint/DevVault.Application.dll
+/home/avillanueva/Proyectos/DevVault/backend/DevVault.Application/obj/Debug/net10.0/DevVault.Application.pdb
+/home/avillanueva/Proyectos/DevVault/backend/DevVault.Application/obj/Debug/net10.0/ref/DevVault.Application.dll

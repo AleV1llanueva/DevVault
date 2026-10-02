@@ -1,9 +1,11 @@
 {
   "version": 2,
-  "dgSpecHash": "lWYSIF2DGFY=",
+  "dgSpecHash": "76c+THd4MVE=",
   "success": true,
   "projectFilePath": "/home/avillanueva/Proyectos/DevVault/backend/DevVault.Infrastructure/DevVault.Infrastructure.csproj",
   "expectedPackageFiles": [
+    "/home/avillanueva/.nuget/packages/fluentvalidation/12.1.1/fluentvalidation.12.1.1.nupkg.sha512",
+    "/home/avillanueva/.nuget/packages/fluentvalidation.dependencyinjectionextensions/12.1.1/fluentvalidation.dependencyinjectionextensions.12.1.1.nupkg.sha512",
     "/home/avillanueva/.nuget/packages/humanizer.core/2.14.1/humanizer.core.2.14.1.nupkg.sha512",
     "/home/avillanueva/.nuget/packages/microsoft.build.framework/18.0.2/microsoft.build.framework.18.0.2.nupkg.sha512",
     "/home/avillanueva/.nuget/packages/microsoft.codeanalysis.analyzers/3.11.0/microsoft.codeanalysis.analyzers.3.11.0.nupkg.sha512",

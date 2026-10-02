@@ -1,8 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "JzXC9vdo064=",
+  "dgSpecHash": "yW+ZMMtKcsg=",
   "success": true,
   "projectFilePath": "/home/avillanueva/Proyectos/DevVault/backend/DevVault.Application/DevVault.Application.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "/home/avillanueva/.nuget/packages/fluentvalidation/12.1.1/fluentvalidation.12.1.1.nupkg.sha512",
+    "/home/avillanueva/.nuget/packages/fluentvalidation.dependencyinjectionextensions/12.1.1/fluentvalidation.dependencyinjectionextensions.12.1.1.nupkg.sha512",
+    "/home/avillanueva/.nuget/packages/microsoft.extensions.dependencyinjection.abstractions/2.1.0/microsoft.extensions.dependencyinjection.abstractions.2.1.0.nupkg.sha512"
+  ],
   "logs": []
 }
