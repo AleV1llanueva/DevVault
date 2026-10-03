@@ -1,6 +1,14 @@
-@DevVault.API_HostAddress = http://localhost:5175
 
-GET {{DevVault.API_HostAddress}}/weatherforecast/
+### 1. Obtener todos los hábitos (Prueba del Verbo GET)
+# Nota: Cambia el puerto 5157 por el puerto real que te arroje la terminal
+GET http://localhost:5157/api/categorias
 Accept: application/json
 
-###
+### 2. Crear un nuevo hábito (Prueba del Verbo POST)
+POST http://localhost:5157/api/categorias
+Content-Type: application/json
+
+{
+  "Nombre": "Docker",
+  "ColorHex": "AF3456"
+}
