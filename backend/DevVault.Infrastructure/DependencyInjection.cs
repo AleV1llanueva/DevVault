@@ -4,6 +4,7 @@ using Microsoft.Extensions.DependencyInjection;
 using DevVault.Application.Interfaces;
 using DevVault.Infrastructure.Data;
 using DevVault.Infrastructure.Repositories;
+using DevVault.Domain.Entities;
 
 
 namespace DevVault.Infrastructure;
@@ -18,6 +19,10 @@ public static class DependencyInjection
 
 
     services.AddScoped<ICategoriaRepository, CategoriaRepository>();
+
+    services.AddScoped<IComandoRepository, ComandoRepository>();
+
+    services.AddScoped<IAtajoRapidoRepository, AtajoRapidoRepository>();
 
     return services;
   }

@@ -21,6 +21,31 @@ namespace DevVault.Infrastructure.Migrations
 
             NpgsqlModelBuilderExtensions.UseIdentityByDefaultColumns(modelBuilder);
 
+            modelBuilder.Entity("DevVault.Domain.Entities.AtajoRapido", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("integer");
+
+                    NpgsqlPropertyBuilderExtensions.UseIdentityByDefaultColumn(b.Property<int>("Id"));
+
+                    b.Property<string>("AliasPersonal")
+                        .IsRequired()
+                        .HasColumnType("text");
+
+                    b.Property<int>("ComandoId")
+                        .HasColumnType("integer");
+
+                    b.Property<int>("FrecuenciaUso")
+                        .HasColumnType("integer");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("ComandoId");
+
+                    b.ToTable("AtajosRapidos");
+                });
+
             modelBuilder.Entity("DevVault.Domain.Entities.Categoria", b =>
                 {
                     b.Property<int>("Id")
@@ -40,6 +65,58 @@ namespace DevVault.Infrastructure.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("Categorias");
+                });
+
+            modelBuilder.Entity("DevVault.Domain.Entities.Comando", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("integer");
+
+                    NpgsqlPropertyBuilderExtensions.UseIdentityByDefaultColumn(b.Property<int>("Id"));
+
+                    b.Property<int>("CategoriaId")
+                        .HasColumnType("integer");
+
+                    b.Property<string>("ComandoText")
+                        .IsRequired()
+                        .HasColumnType("text");
+
+                    b.Property<string>("Explicacion")
+                        .IsRequired()
+                        .HasColumnType("text");
+
+                    b.Property<string>("Titulo")
+                        .IsRequired()
+                        .HasColumnType("text");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("CategoriaId");
+
+                    b.ToTable("Comandos");
+                });
+
+            modelBuilder.Entity("DevVault.Domain.Entities.AtajoRapido", b =>
+                {
+                    b.HasOne("DevVault.Domain.Entities.Comando", "Comando")
+                        .WithMany()
+                        .HasForeignKey("ComandoId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Comando");
+                });
+
+            modelBuilder.Entity("DevVault.Domain.Entities.Comando", b =>
+                {
+                    b.HasOne("DevVault.Domain.Entities.Categoria", "Categoria")
+                        .WithMany()
+                        .HasForeignKey("CategoriaId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Categoria");
                 });
 #pragma warning restore 612, 618
         }

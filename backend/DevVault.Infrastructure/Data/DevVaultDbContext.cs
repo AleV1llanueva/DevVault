@@ -9,4 +9,7 @@ public class DevVaultDbContext : DbContext
 
   public DbSet<Categoria> Categorias { get; set; }
 
+  public DbSet<Comando> Comandos { get; set; }
+
+  public DbSet<AtajoRapido> AtajosRapidos { get; set; }
 }
