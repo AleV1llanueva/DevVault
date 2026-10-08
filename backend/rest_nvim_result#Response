@@ -1,0 +1,23 @@
+### 1. Listar categorias
+GET http://localhost:5175/api/Categorias
+HTTP/1.1 200 OK
+
+# @_RES (formatted)
+[
+  {
+    "id": 1,
+    "nombre": "Ubuntu",
+    "colorHex": "56F765"
+  },
+  {
+    "id": 2,
+    "nombre": "Fedora",
+    "colorHex": "AAFFDD"
+  },
+  {
+    "id": 3,
+    "nombre": "Docker",
+    "colorHex": "2787F5"
+  }
+]
+# @_END

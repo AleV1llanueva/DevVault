@@ -4,7 +4,6 @@ namespace DevVault.Application.Features.AtajosRapidos.DTOs;
 
 public class UpdateAtajoRapidoRequestDto
 {
-  public int Id { get; set; }
   public string AliasPersonal { get; set; } = string.Empty;
   public int FrecuenciaUso { get; set; }
 

@@ -73,8 +73,6 @@ public class CategoriasController : ControllerBase
   [HttpPut("{id}")]
   public async Task<IActionResult> UpdateCategoriaById(int id, [FromBody] Categoria categoria)
   {
-    if (id != categoria.Id)
-      return BadRequest(new { mensaje = "No se encontro una Categoría con el Id ingresado" });
 
     var categoriaValidation = new UpdateCategoriaRequestDto
     {

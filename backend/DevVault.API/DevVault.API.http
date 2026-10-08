@@ -1,14 +1,119 @@
 
-### 1. Obtener todos los hábitos (Prueba del Verbo GET)
-# Nota: Cambia el puerto 5157 por el puerto real que te arroje la terminal
-GET http://localhost:5157/api/categorias
+@baseUrl = http://localhost:5175
+
+@categoriaId = 4
+@comandoId = 2
+@atajoId = 2
+
+
+################################################################
+### CATEGORIAS
+################################################################
+
+### 1. Listar categorias
+GET {{baseUrl}}/api/Categorias
 Accept: application/json
 
-### 2. Crear un nuevo hábito (Prueba del Verbo POST)
-POST http://localhost:5157/api/categorias
+### 2. Crear categoria
+POST {{baseUrl}}/api/Categorias
 Content-Type: application/json
 
 {
-  "Nombre": "Docker",
-  "ColorHex": "AF3456"
+  "nombre": "Docker",
+  "colorHex": "AF3456"
 }
+
+### 3. Obtener categoria por id
+GET {{baseUrl}}/api/Categorias/{{categoriaId}}
+Accept: application/json
+
+### 4. Actualizar categoria
+PUT {{baseUrl}}/api/Categorias/{{categoriaId}}
+Content-Type: application/json
+
+{
+  "nombre": "Docker (editada)",
+  "colorHex": "1D63ED"
+}
+
+
+################################################################
+### COMANDOS
+################################################################
+
+### 5. Listar comandos
+GET {{baseUrl}}/api/Comandos
+Accept: application/json
+
+### 6. Crear comando
+POST {{baseUrl}}/api/Comandos
+Content-Type: application/json
+
+{
+  "categoriaId": {{categoriaId}},
+  "titulo": "Listar contenedores",
+  "comandoText": "docker ps -a",
+  "explicacion": "Muestra todos los contenedores, incluso los detenidos."
+}
+
+### 7. Obtener comando por id
+GET {{baseUrl}}/api/Comandos/{{comandoId}}
+Accept: application/json
+
+### 8. Actualizar comando
+PUT {{baseUrl}}/api/Comandos/{{comandoId}}
+Content-Type: application/json
+
+{
+  "categoriaId": {{categoriaId}},
+  "titulo": "Listar contenedores (editado)",
+  "comandoText": "docker ps -a --format table",
+  "explicacion": "Igual que antes pero con formato de tabla."
+}
+
+
+################################################################
+### ATAJOS RAPIDOS
+################################################################
+
+### 9. Listar atajos
+GET {{baseUrl}}/api/AtajosRapidos
+Accept: application/json
+
+### 10. Crear atajo
+POST {{baseUrl}}/api/AtajosRapidos
+Content-Type: application/json
+
+{
+  "comandoId": {{comandoId}},
+  "aliasPersonal": "dps",
+  "frecuenciaUso": 1
+}
+
+### 11. Obtener atajo por id
+GET {{baseUrl}}/api/AtajosRapidos/{{atajoId}}
+Accept: application/json
+
+### 12. Actualizar atajo
+PUT {{baseUrl}}/api/AtajosRapidos/{{atajoId}}
+Content-Type: application/json
+
+{
+  "comandoId": {{comandoId}},
+  "aliasPersonal": "dps2",
+  "frecuenciaUso": 5
+}
+
+
+################################################################
+### LIMPIEZA (orden inverso por las dependencias)
+################################################################
+
+### 13. Eliminar atajo
+DELETE {{baseUrl}}/api/AtajosRapidos/{{atajoId}}
+
+### 14. Eliminar comando
+DELETE {{baseUrl}}/api/Comandos/{{comandoId}}
+
+### 15. Eliminar categoria
+DELETE {{baseUrl}}/api/Categorias/{{categoriaId}}
