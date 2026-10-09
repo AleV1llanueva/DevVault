@@ -72,5 +72,10 @@ public class CategoriaRepository : ICategoriaRepository
     return categoria;
   }
 
+  public async Task<bool> ExistsAsync(int id)
+  {
+    return await _context.Categorias.AnyAsync(c => c.Id == id);
+  }
+
 }
 

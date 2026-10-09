@@ -15,6 +15,7 @@ public interface ICategoriaRepository
 
   Task<Categoria?> UpdateByIdAsync(int id, Categoria categoria);
 
+  Task<bool> ExistsAsync(int id);
 }
 
 

@@ -16,6 +16,7 @@ public interface IComandoRepository
 
   Task<Comando?> UpdateByIdAsync(int id, Comando comando);
 
+  Task<bool> ExistsAsync(int id);
 }
 
 

@@ -73,5 +73,10 @@ public class ComandoRepository : IComandoRepository
     return comando;
   }
 
+  public async Task<bool> ExistsAsync(int id)
+  {
+    return await _context.Comandos.AnyAsync(x => x.Id == id);
+  }
+
 }
 

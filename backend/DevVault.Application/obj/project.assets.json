@@ -110,6 +110,7 @@
   "projectFileDependencyGroups": {
     "net10.0": [
       "DevVault.Domain >= 1.0.0",
+      "FluentValidation >= 12.1.1",
       "FluentValidation.DependencyInjectionExtensions >= 12.1.1"
     ]
   },
@@ -162,6 +163,10 @@
         "framework": "net10.0",
         "targetAlias": "net10.0",
         "dependencies": {
+          "FluentValidation": {
+            "target": "Package",
+            "version": "[12.1.1, )"
+          },
           "FluentValidation.DependencyInjectionExtensions": {
             "target": "Package",
             "version": "[12.1.1, )"
