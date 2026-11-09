@@ -16,7 +16,7 @@ public class UpdateComandoValidator : AbstractValidator<UpdateComandoRequestDto>
 
     RuleFor(x => x.Titulo)
       .NotEmpty().WithMessage("El titulo del comando no puede estar vacio")
-      .MinimumLength(3).WithMessage("El titulo debe contener al menos 5 caracteres")
+      .MinimumLength(3).WithMessage("El titulo debe contener al menos 3 caracteres")
       .MaximumLength(50).WithMessage("La titulo es muy grande");
 
 
